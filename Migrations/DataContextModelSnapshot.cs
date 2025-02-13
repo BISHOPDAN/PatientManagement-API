@@ -74,7 +74,7 @@ namespace PatientManagement_API.Migrations
 
                     b.HasIndex("PatientId");
 
-                    b.ToTable("Records");
+                    b.ToTable("PatientRecords");
                 });
 
             modelBuilder.Entity("PatientManagementAPI.Models.PatientRecord", b =>

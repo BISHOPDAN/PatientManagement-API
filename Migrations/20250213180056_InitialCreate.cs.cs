@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace PatientManagement_API.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class InitialCreatecs : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -31,7 +31,7 @@ namespace PatientManagement_API.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Records",
+                name: "PatientRecords",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
@@ -44,9 +44,9 @@ namespace PatientManagement_API.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Records", x => x.Id);
+                    table.PrimaryKey("PK_PatientRecords", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Records_Patients_PatientId",
+                        name: "FK_PatientRecords_Patients_PatientId",
                         column: x => x.PatientId,
                         principalTable: "Patients",
                         principalColumn: "Id",
@@ -54,8 +54,8 @@ namespace PatientManagement_API.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Records_PatientId",
-                table: "Records",
+                name: "IX_PatientRecords_PatientId",
+                table: "PatientRecords",
                 column: "PatientId");
         }
 
@@ -63,7 +63,7 @@ namespace PatientManagement_API.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Records");
+                name: "PatientRecords");
 
             migrationBuilder.DropTable(
                 name: "Patients");

@@ -11,8 +11,8 @@ using PatientManagementAPI.Data;
 namespace PatientManagement_API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20250213035658_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20250213180056_InitialCreate.cs")]
+    partial class InitialCreatecs
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -77,7 +77,7 @@ namespace PatientManagement_API.Migrations
 
                     b.HasIndex("PatientId");
 
-                    b.ToTable("Records");
+                    b.ToTable("PatientRecords");
                 });
 
             modelBuilder.Entity("PatientManagementAPI.Models.PatientRecord", b =>
