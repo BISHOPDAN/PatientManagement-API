@@ -15,7 +15,8 @@ The **Patient Management API** is a RESTful service designed to manage patient r
 ```
 PatientManagement-API/
 │── Controllers/            # API Controllers (Patient, Records)
-│── Models/                 # Data Models (Entities, DTOs)
+│── Models/                 # Data Models (Entities)
+│── Dto/                    # Data Transfer Objects (Dto)
 │── Repositories/           # Data Access Layer (Interfaces, Implementations)
 │── PatientManagement-API.Tests/  # Unit & Integration Tests
 │── program.cs              # App Configuration & Middleware
