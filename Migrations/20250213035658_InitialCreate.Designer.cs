@@ -8,17 +8,17 @@ using PatientManagementAPI.Data;
 
 #nullable disable
 
-namespace PatientManagementAPI.Migrations
+namespace PatientManagement_API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20250211104436_InitialCreate")]
+    [Migration("20250213035658_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "9.0.1");
+            modelBuilder.HasAnnotation("ProductVersion", "9.0.2");
 
             modelBuilder.Entity("PatientManagementAPI.Models.Patient", b =>
                 {
@@ -35,6 +35,9 @@ namespace PatientManagementAPI.Migrations
                     b.Property<string>("FirstName")
                         .HasColumnType("TEXT");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("LastName")
                         .HasColumnType("TEXT");
 
@@ -49,7 +52,7 @@ namespace PatientManagementAPI.Migrations
                     b.ToTable("Patients");
                 });
 
-            modelBuilder.Entity("PatientManagementAPI.Models.Record", b =>
+            modelBuilder.Entity("PatientManagementAPI.Models.PatientRecord", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -77,7 +80,7 @@ namespace PatientManagementAPI.Migrations
                     b.ToTable("Records");
                 });
 
-            modelBuilder.Entity("PatientManagementAPI.Models.Record", b =>
+            modelBuilder.Entity("PatientManagementAPI.Models.PatientRecord", b =>
                 {
                     b.HasOne("PatientManagementAPI.Models.Patient", "Patient")
                         .WithMany("Records")

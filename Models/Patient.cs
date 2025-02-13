@@ -11,7 +11,7 @@ namespace PatientManagementAPI.Models
         public string FullName => $"{FirstName} {LastName}";
         public string? PhoneNumber { get; set; }
         public bool IsDeleted { get; set; } = false;
-        public ICollection<Record> Records { get; set; } = new List<Record>();
+        public ICollection<PatientRecord> Records { get; set; } = new List<PatientRecord>();
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
     }

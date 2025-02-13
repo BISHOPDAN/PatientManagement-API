@@ -7,7 +7,7 @@ using PatientManagementAPI.Data;
 
 #nullable disable
 
-namespace PatientManagementAPI.Migrations
+namespace PatientManagement_API.Migrations
 {
     [DbContext(typeof(DataContext))]
     partial class DataContextModelSnapshot : ModelSnapshot
@@ -15,7 +15,7 @@ namespace PatientManagementAPI.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "9.0.1");
+            modelBuilder.HasAnnotation("ProductVersion", "9.0.2");
 
             modelBuilder.Entity("PatientManagementAPI.Models.Patient", b =>
                 {
@@ -49,7 +49,7 @@ namespace PatientManagementAPI.Migrations
                     b.ToTable("Patients");
                 });
 
-            modelBuilder.Entity("PatientManagementAPI.Models.Record", b =>
+            modelBuilder.Entity("PatientManagementAPI.Models.PatientRecord", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -77,7 +77,7 @@ namespace PatientManagementAPI.Migrations
                     b.ToTable("Records");
                 });
 
-            modelBuilder.Entity("PatientManagementAPI.Models.Record", b =>
+            modelBuilder.Entity("PatientManagementAPI.Models.PatientRecord", b =>
                 {
                     b.HasOne("PatientManagementAPI.Models.Patient", "Patient")
                         .WithMany("Records")

@@ -7,7 +7,7 @@ namespace PatientManagementAPI.Repositories.Interfaces
     {
         Task<IEnumerable<RecordDto>> GetAllRecordsAsync();
         Task<RecordDto?> GetRecordByIdAsync(int id);
-        Task<Record> CreateRecordAsync(CreateRecordDto dto);
+        Task<PatientRecord> CreateRecordAsync(CreateRecordDto dto);
         Task<RecordDto?> UpdateRecordAsync(int id, UpdateRecordDto dto);
 
 

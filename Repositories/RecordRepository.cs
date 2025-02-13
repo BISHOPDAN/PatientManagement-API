@@ -16,7 +16,7 @@ namespace PatientManagementAPI.Repositories.Implementations
 
         public async Task<IEnumerable<RecordDto>> GetAllRecordsAsync()
         {
-            return await _context.Records
+            return await _context.PatientRecords
                 .Select(r => new RecordDto
                 {
                     Id = r.Id,
@@ -33,7 +33,7 @@ namespace PatientManagementAPI.Repositories.Implementations
 
         public async Task<RecordDto?> GetRecordByIdAsync(int id)
         {
-            var record =  await _context.Records
+            var record =  await _context.PatientRecords
                 .FindAsync(id);
 
             if (record == null)
@@ -50,7 +50,7 @@ namespace PatientManagementAPI.Repositories.Implementations
             };
         }
 
-        public async Task<Record> CreateRecordAsync(CreateRecordDto dto)
+        public async Task<PatientRecord> CreateRecordAsync(CreateRecordDto dto)
         {
             var patient = await _context.Patients
                 .FirstOrDefaultAsync(p => p.Id == dto.PatientId);
@@ -58,14 +58,14 @@ namespace PatientManagementAPI.Repositories.Implementations
             if (patient == null)
                 throw new Exception("Patient not found.");
 
-            var record = new Record
+            var record = new PatientRecord
             {
                 Description = dto.Description,
                 PatientId = dto.PatientId,
                 CardNumber = dto.CardNumber
             };
 
-            await _context.Records.AddAsync(record);
+            await _context.PatientRecords.AddAsync(record);
             await _context.SaveChangesAsync();
 
             return record;
@@ -73,7 +73,7 @@ namespace PatientManagementAPI.Repositories.Implementations
 
         public async Task<RecordDto?> UpdateRecordAsync(int id, UpdateRecordDto dto)
         {
-            var record = await _context.Records.FindAsync(id);
+            var record = await _context.PatientRecords.FindAsync(id);
             if (record == null)
                 return null;
 

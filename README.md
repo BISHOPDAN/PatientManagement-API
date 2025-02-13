@@ -7,6 +7,7 @@ The **Patient Management API** is a RESTful service designed to manage patient r
 - **Patient Records Management**: Create, update, and delete patient profiles.
 - **Medical Records Handling**: Store and retrieve medical records linked to patients.
 - **API Documentation**: Swagger UI for interactive API exploration.
+- **Unit & Integration Testing**: Automated tests using xUnit.
 
 ---
 
@@ -17,6 +18,7 @@ PatientManagementAPI/
 │── Models/                 # Data Models (Entities, DTOs)
 │── Repositories/           # Data Access Layer (Interfaces, Implementations)
 │── Services/               # Business Logic Layer
+│── Tests/                  # Unit & Integration Tests
 │── program.cs              # App Configuration & Middleware
 │── appsettings.json        # Configuration File
 │── README.md               # Project Documentation
@@ -66,6 +68,23 @@ API will be available at: `http://localhost:5003`
 | `GET`  | `/api/Record/GetRecordList`| Retrieve all patient records |
 | `GET`  | `/api/Record/GetRecordById/{id}` | Retrieve medical record |
 | `PUT`  | `/api/Record/UpdateRecord/{id}` | update medical record |
+
+---
+
+## 🧪 Running Tests
+### **1️⃣ Unit Tests**
+Unit tests are written using **xUnit** to test repository methods, and logic, and controllers.  
+To run unit tests, execute:
+```sh
+dotnet test
+```
+
+### **2️⃣ Integration Tests**
+Integration tests validate the API endpoints using an in-memory database (e.g., SQLite in-memory).  
+Run integration tests with:
+```sh
+dotnet test --filter Category=Integration
+```
 
 ---
 

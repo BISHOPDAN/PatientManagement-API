@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PatientManagement-API", "PatientManagement-API.csproj", "{33284A71-2CE3-49A1-9C5C-08AD08EC7FE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientManagement-API.Tests", "PatientManagement-API.Tests\PatientManagement-API.Tests.csproj", "{0F2C0FD0-3C07-476B-9619-2E20C677A2D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{33284A71-2CE3-49A1-9C5C-08AD08EC7FE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33284A71-2CE3-49A1-9C5C-08AD08EC7FE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33284A71-2CE3-49A1-9C5C-08AD08EC7FE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33284A71-2CE3-49A1-9C5C-08AD08EC7FE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F2C0FD0-3C07-476B-9619-2E20C677A2D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F2C0FD0-3C07-476B-9619-2E20C677A2D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F2C0FD0-3C07-476B-9619-2E20C677A2D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F2C0FD0-3C07-476B-9619-2E20C677A2D6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {403C91FB-64EC-44F1-8C75-DAA4406F2DAE}
+	EndGlobalSection
+EndGlobal
