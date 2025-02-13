@@ -13,12 +13,11 @@ The **Patient Management API** is a RESTful service designed to manage patient r
 
 ## 🏗️ Project Structure
 ```
-PatientManagementAPI/
+PatientManagement-API/
 │── Controllers/            # API Controllers (Patient, Records)
 │── Models/                 # Data Models (Entities, DTOs)
 │── Repositories/           # Data Access Layer (Interfaces, Implementations)
-│── Services/               # Business Logic Layer
-│── Tests/                  # Unit & Integration Tests
+│── PatientManagement-API.Tests/  # Unit & Integration Tests
 │── program.cs              # App Configuration & Middleware
 │── appsettings.json        # Configuration File
 │── README.md               # Project Documentation
